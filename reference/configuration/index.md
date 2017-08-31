@@ -7,7 +7,7 @@ sort: 0
 
 ===
 
-Cockpit by default don't need any further configuration to run. But maybe you want to manage multi-language content or use MongoDB instead of SQLite as your favorite data storage. Therefore Cockpit provides an easy way to tweak some settings.
+By default, Cockpit doesn't need any further configuration to run. However, you might want to manage multi-language content or use MongoDB instead of SQLite as your favorite data storage. Therefore Cockpit provides an easy way to tweak some settings.
 
 
 
