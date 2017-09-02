@@ -26,8 +26,18 @@ session.name: mysession
 
 # define the languages you want to manage
 languages:
-    en: English
+    fr: French
     de: German
+
+# define additional groups
+groups:
+    author:
+        $admin: false
+        $vars:
+            finder.path: /storage/upload
+        cockpit:
+            backend: true
+            finder: true
 
 # use mongodb as main data storage
 database:    
