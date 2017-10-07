@@ -44,4 +44,17 @@ database:
     server: mongodb://localhost:27017
     options:
         db: cockpitdb
+
+
+# use smtp to send emails
+mailer:
+    from      : info@mydomain.tld
+    transport : smtp
+    host      : smtp.myhost.tld
+    user      : username
+    password  : xxpasswordxx,
+    port      : 25,
+    auth      : true,
+    encryption: '' # '', 'ssl' or 'tls'
+
 ```

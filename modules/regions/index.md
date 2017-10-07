@@ -35,6 +35,10 @@ Content editors will get an easy to use form to manage the region data.
 
 ## API
 
+### /regions/get/{regionname}
+
+Get rendered region template.
+
 <div class="browser uk-display-block">
 <div class="browser-title-bar">
     <div class="close"></div>
@@ -44,6 +48,23 @@ Content editors will get an easy to use form to manage the region data.
 <div class="browser-content uk-position-relative uk-contrast">
 <pre class="uk-panel-space uk-margin-remove uk-text-left uk-text-h5 console">
 GET /api/regions/get/<strong>{regionname}</strong><span class="uk-text-muted">?token=*token*</span>
+</pre>
+</div>
+</div>
+
+### /regions/data/{regionname}
+
+Get form data as json.
+
+<div class="browser uk-display-block">
+<div class="browser-title-bar">
+    <div class="close"></div>
+    <div class="min"></div>
+    <div class="max"></div>
+</div>
+<div class="browser-content uk-position-relative uk-contrast">
+<pre class="uk-panel-space uk-margin-remove uk-text-left uk-text-h5 console">
+GET /api/regions/data/<strong>{regionname}</strong><span class="uk-text-muted">?token=*token*</span>
 </pre>
 </div>
 </div>

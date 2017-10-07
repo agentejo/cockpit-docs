@@ -32,6 +32,10 @@ You will get an easy to use entry form to manage your content items.
 
 ## API
 
+### /collections/get/{collectionname}
+
+
+
 <div class="browser uk-display-block">
 <div class="browser-title-bar">
     <div class="close"></div>
