@@ -21,3 +21,10 @@ Go to _/url/to/cockpit/install_ in your favorite Browser.
 
 ---
 **Done!** You're ready to use Cockpit.
+
+## Upgrading to a newer version of Cockpit
+
+1. Download and unzip your desired version of Cockpit
+2. Override the whole cockpit directory except the `config` and the `storage` folder.
+
+That's it! 
