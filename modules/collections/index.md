@@ -32,19 +32,53 @@ You will get an easy to use entry form to manage your content items.
 
 ## API
 
-### /collections/get/{collectionname}
+### /api/collections/collection/{collectionname}
+
+Get collection schema
+
+```javascript
+fetch('/api/collections/collection/posts?token=xxtokenxx')
+    .then(collection => collection.json())
+    .then(collection => console.log(collection));
+```
+
+### /api/collections/get/{collectionname}
+
+Get collection entries
+
+```javascript
+fetch('/api/collections/get/posts?token=xxtokenxx')
+    .then(res => res.json())
+    .then(res => console.log(res));
+```
+
+```javascript
+fetch('/api/collections/save/posts?token=xxtokenxx', {
+    method: 'post',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+        filter: {published:true},
+        limit: 10,
+        skip: 5,
+        sort: {_created:-1},
+        populate: 1 // resolve linked collection items
+    }))
+    .then(res=>res.json())
+    .then(res => console.log(res));
+```
 
 
+### /api/collections/save/{collectionname}
 
-<div class="browser uk-display-block">
-<div class="browser-title-bar">
-    <div class="close"></div>
-    <div class="min"></div>
-    <div class="max"></div>
-</div>
-<div class="browser-content uk-position-relative uk-contrast">
-<pre class="uk-panel-space uk-margin-remove uk-text-left uk-text-h5 console">
-GET /api/collections/get/<strong>{collectionname}</strong><span class="uk-text-muted">?token=*token*</span>
-</pre>
-</div>
-</div>
+Create / Update collection collection entries
+
+```javascript
+fetch('/api/collections/save/posts?token=xxtokenxx', {
+    method: 'post',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+        data: {...}
+    }))
+    .then(res=>res.json())
+    .then(entry => console.log(entry));
+```

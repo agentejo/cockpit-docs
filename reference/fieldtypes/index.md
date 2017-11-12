@@ -40,6 +40,21 @@ _Options_
 }
 ```
 
+### Collection-Link
+---
+Link other collection items.
+
+
+_Options_
+
+```json
+{
+    "link": "collectionname",
+    "multiple": false,
+    "display": "fieldname",
+    "limit": false
+}
+```
 
 ### Color
 ---
