@@ -53,7 +53,7 @@ fetch('/api/collections/get/posts?token=xxtokenxx')
 ```
 
 ```javascript
-fetch('/api/collections/save/posts?token=xxtokenxx', {
+fetch('/api/collections/get/posts?token=xxtokenxx', {
     method: 'post',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
