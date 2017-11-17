@@ -7,9 +7,9 @@ sort: 1
 
 ===
 
-- PHP >= 5.6
+- PHP >= 7.1
 - PDO with SQLite support ( or MongoDB )
-- GD extension enabled
+- GD, Zip extension enabled
 - Apache (with mod_rewrite enabled) or nginx
 - Any modern Browser
 
