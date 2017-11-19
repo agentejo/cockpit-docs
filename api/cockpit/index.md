@@ -95,5 +95,5 @@ fetch('/api/cockpit/image?token=xxtokenxx', {
 ```
 
 ```html
-<img src="/api/cockpit/image?token=xxtokenxx&src=path&width=200&height=200&output=true">
+<img src="/api/cockpit/image?token=xxtokenxx&src=path&w=200&h=200&o=true">
 ```
