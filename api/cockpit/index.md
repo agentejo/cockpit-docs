@@ -84,10 +84,11 @@ fetch('/api/cockpit/image?token=xxtokenxx', {
     body: JSON.stringify({
         src: imagePath || asset._id,
         m: ('thumbnail' | 'bestFit' | 'resize' | 'fitToWidth' | 'fitToHeight'),
-        w: (int),
-        h: (int),
-        q: (int),
-        b64: (boolean)
+        w: (int),           // width
+        h: (int),           // height
+        q: (int),           // quality
+        d: (boolean)        // include full domain path
+        b64: (boolean)      // return base64 encoded image string
     })
 })
 .then(url => url.text())
