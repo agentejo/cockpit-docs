@@ -11,9 +11,9 @@ Before accessing your data you need to create an API token. To do so please go t
 
 ![Create Token](webtoken.png)
 
-Custom keys can be added as required. Each key has a set of `Rules` which specify which API endpoints the token is valid for. 
+### Custom API Tokens
 
-The default rule `*` means all endpoints.
+*Custom keys* can be added as required. Each key has a set of Rules which specify which API endpoints the token is valid for. The default rule `*` means all endpoints.
 
 To limit the token you can specify one permitted endpoint per line.
 
