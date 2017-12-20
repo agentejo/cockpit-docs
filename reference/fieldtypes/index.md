@@ -1,7 +1,7 @@
 uid: pid-57cc84c1a002f
 type: documentation/page
 created: 2016-09-04 20:32:01
-modified: 2016-09-04 20:32:01
+modified: 2017-12-20 20:32:01
 title: Fieldtypes
 sort: 1
 
@@ -233,6 +233,18 @@ _Options_
 ```json
 {
     "autocomplete": []
+}
+```
+
+### Text
+---
+Simple text input.
+
+_Options_
+
+```
+{
+  "slug": true
 }
 ```
 
