@@ -7,6 +7,8 @@ sort: 0
 
 ===
 
+Difficulty: Easy ⭐
+
 - [Create a Collection](#create-a-collection)
 	- [Collection Info](collection-info) 
 	- [Collection Fields](collection-fields) 
