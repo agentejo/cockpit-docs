@@ -93,6 +93,15 @@ As you just created this collection, it is empty.  To add a new item to the coll
 
 You'll be presented to the members item view, which includes form with the fields you just configured - **name** and **role** fields as empty text fields.
 
+![members collection view](./create-a-collection-item-2.png)
+
+To create an item, simply fill this form and click the **Save** button.
+
+![members collection view](./create-a-collection-item-3.png)
+
+If you go back to the Members collection page, you can verify that the item was successfully created.
+
+![members collection view](./create-a-collection-item-4.png)
 
 
 ## List collection items
