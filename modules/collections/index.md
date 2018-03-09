@@ -7,7 +7,14 @@ sort: 0
 
 ===
 
-A **Collections** is an abstraction to store structured content. A collection is defined by its **fields** (how is the collections structured), **items** and **permissions** (you can find detailed documentation on permissions in the [Permissions Page](link-to-permission). One example of a collection would be a collection named **Members**, used to store members of a company.
+- [Create a Collection](#create-a-collection)
+	- [Collection Info](collection-info) 
+	- [Collection Fields](collection-fields) 
+- [List collection items](#list-collection-items)
+- [Edit a collection item](#edit-a-collection-item)
+
+
+A **Collection** is an abstraction to store structured content. A collection is defined by its **fields** (how is the collections structured), **items** and **permissions** (you can find detailed documentation on permissions in the [Permissions Page](link-to-permission). One example of a collection would be a collection named **Members**, used to store members of a company.
 
 ## Create a Collection
 
@@ -69,6 +76,22 @@ Below a screenshot of two fields we created and their configuration:
 ![name field configuration](./create-a-collection-7.png)
 
 ![role field configuration](./create-a-collection-8.png)
+
+Once you're finished configuring the collection, click the **Save** button to create a collection. If you go back to the dashboard, you can see that the collection was successfully created.
+
+![role field configuration](./create-a-collection-8.png)
+
+## Create a collection item
+
+Once you created and configured a collection, you'll be able to add items to that collection. You can do that by going to that collection view. 
+
+As you just created this collection, it is empty.  To add a new item to the collection, click **Create an entry**.
+
+![members collection view](./create-a-collection-item-1.png)
+
+You'll be presented to the members item view, which includes form with the fields you just configured - **name** and **role** fields as empty text fields.
+
+
 
 ## List collection items
 
