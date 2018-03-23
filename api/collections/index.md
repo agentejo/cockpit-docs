@@ -9,7 +9,7 @@ sort: 2
 
 ### /api/collections/listCollections
 
-Get collection schema
+Get all collections
 
 ```javascript
 fetch('/api/collections/listCollections?token=xxtokenxx')
@@ -23,6 +23,24 @@ Get collection schema
 
 ```javascript
 fetch('/api/collections/collection/posts?token=xxtokenxx')
+    .then(collection => collection.json())
+    .then(collection => console.log(collection));
+```
+
+### /api/collections/updateCollection/{collectionname}
+
+Update collection schema
+
+```javascript
+fetch('/api/collections/updateCollection/posts?token=xxtokenxx', {
+        method: 'post',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            data: {
+            fields: [...]
+          }
+        })
+    })
     .then(collection => collection.json())
     .then(collection => console.log(collection));
 ```

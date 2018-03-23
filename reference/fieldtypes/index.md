@@ -24,6 +24,7 @@ _Options_
 ```json
 {
     "label": false
+    "cls": "" // custom class
 }
 ```
 
@@ -36,7 +37,8 @@ _Options_
 
 ```json
 {
-    "syntax": "text"
+    "syntax": "text",
+    "height": "auto"
 }
 ```
 
@@ -50,8 +52,8 @@ _Options_
 ```json
 {
     "link": "collectionname",
-    "multiple": false,
     "display": "fieldname",
+    "multiple": false,
     "limit": false
 }
 ```
@@ -72,7 +74,6 @@ _Options_
 ### Date
 ---
 Provides a date chooser field (based on Spectrum.js).
-
 
 _Options_
 
@@ -110,6 +111,24 @@ _Options_
 ---
 Html editor field with preview.
 
+_Options_
+
+```json
+{
+    "iframe"         : false,
+    "mode"           : "split",
+    "markdown"       : false,
+    "enablescripts"  : false,
+    "height"         : 500,
+    "maxsplitsize"   : 1000,
+    "codemirror"     : { /* codemirror settings */ },
+    "toolbar"        : [ "bold", "italic", "strike", "link", "image", "blockquote", "listUl", "listOl" ],
+    "lblPreview"     : "Preview",
+    "lblCodeview"    : "HTML",
+    "lblMarkedview"  : "Markdown"
+}
+```
+
 
 ### Image
 ---
@@ -133,11 +152,26 @@ _Options_
 ---
 Location chooser to get lat,lng values.
 
+_Options_
+
+```json
+{
+    "zoomlevel": 13
+}
+```
+
 
 ### Markdown
 ---
 Markdown editor field with preview.
 
+_Options_
+
+```json
+{
+    "height": 500
+}
+```
 
 ### Multipleselect
 ---
@@ -155,9 +189,26 @@ _Options_
 ---
 JSON object editor.
 
+_Options_
+
+```json
+{
+    "height": 300,
+    "cls": ""
+}
+```
+
 ### Password
 ---
 Password field.
+
+_Options_
+
+```json
+{
+    "cls": ""
+}
+```
 
 ### Rating
 ---
@@ -168,7 +219,8 @@ _Options_
 ```json
 {
     "mininmum": 0,
-    "maximum": 5
+    "maximum": 5,
+    "precision": 0
 }
 ```
 
@@ -181,7 +233,8 @@ _Options_
 
 ```json
 {
-    "field": {"type": "text", "label": "Name"}
+    "field": {"type": "text", "label": "Name"},
+    "display": null // display value on re-order
 }
 ```
 
@@ -244,6 +297,13 @@ _Options_
 
 ```
 {
+  "cls": "",
+  "maxlength": null, 
+  "minlength": null, 
+  "step": null, 
+  "placeholder": null, 
+  "pattern": null, 
+  "size": null,
   "slug": true
 }
 ```
@@ -252,10 +312,41 @@ _Options_
 ---
 Simple textarea field.
 
+_Options_
+
+```
+{
+  "cls": "",
+  "maxlength": null, 
+  "minlength": null, 
+  "cols": null, 
+  "placeholder": null, 
+  "rows": null
+}
+```
+
 ### Time
 ---
 Time picker field.
 
+_Options_
+
+```
+{
+  "cls": ""
+}
+```
+
 ### WYSIWYG
 ---
 A WYSIWYG editor field.
+
+
+_Options_
+
+```
+{
+  "cls": "",
+  "editor": { /* tinyMCE settings */ }
+}
+```
