@@ -38,6 +38,8 @@ groups:
         cockpit:
             backend: true
             finder: true
+        collections:
+            manage: true
 
 # use mongodb as main data storage
 database:    
@@ -58,3 +60,14 @@ mailer:
     encryption: '' # '', 'ssl' or 'tls'
 
 ```
+
+### Group ACLs
+
+Access to cockpit is managed by a simple access control list (ACL). The ACLs can be defined by module and acl name in the settings above. The following ACLs can be defined on a per-group basis:
+
+  * `cockpit`: Access to the cockpit itself
+    * `backend`: Access to the admin backend - you need this in order to log in etc.
+    * `finder`: Access to the media finder
+  * `collections`: Special ACLs for collections
+    * `manage`: Manger rights for collections. You need this for certain AJAX requests.
+ 
