@@ -74,7 +74,7 @@ fetch('/api/collections/get/posts?token=xxtokenxx', {
 
 ### /api/collections/save/{collectionname}
 
-Create / Update collection collection entries
+Create / Update collection entries
 
 ```javascript
 fetch('/api/collections/save/posts?token=xxtokenxx', {
@@ -91,7 +91,7 @@ fetch('/api/collections/save/posts?token=xxtokenxx', {
 
 ### /api/collections/remove/{collectionname}
 
-Create / Update collection collection entries
+Delete collection entries
 
 ```javascript
 fetch('/api/collections/remove/posts?token=xxtokenxx', {
