@@ -19,7 +19,7 @@ Create your container by running
 docker run -d --name cockpit -p 8080:80 agentejo/cockpit
 ```
 
-Next, follow the [setup instructions](https://getcockpit.com/documentation/getting-started/installation)
+To complete the setup, open `http://localhost:8080/install` and follow the instructions there.
 
 ## Extend the Image
 
