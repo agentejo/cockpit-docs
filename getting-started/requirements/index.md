@@ -8,12 +8,12 @@ sort: 1
 ===
 
 - PHP >= 7.1
-- PDO with SQLite support ( or MongoDB )
+- PDO with SQLite support (or MongoDB)
 - GD, Zip extension enabled
 - Apache (with mod_rewrite enabled) or nginx
 - Any modern Browser
 
 ---
 
-**That's it.** No generation or build scripts, no heavyweight PHP libraries or dependencies.
-Cockpit was succesfully tested on Apache and Nginx.
+**That's it.** No generation or build scripts, no heavy-weight PHP libraries or dependencies.
+Cockpit was successfully tested on Apache and nginx.
