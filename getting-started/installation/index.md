@@ -12,12 +12,12 @@ sort: 2
 
 ### Set permissions
 
-Make sure that the _storage_ folder , and all of its sub-folders have write-access permission.
+Make sure that the folders `storage` and `config` with all of its sub-folders have write-access by the web server.
 
 
 ### Create your first user
 
-Go to _/url/to/cockpit/install_ in your favorite Browser.
+Go to `/url/to/cockpit/install` in your favorite Browser and follow the instructions.
 
 ---
 **Done!** You're ready to use Cockpit.
