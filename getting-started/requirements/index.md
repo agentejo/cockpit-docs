@@ -8,9 +8,9 @@ sort: 1
 ===
 
 - PHP >= 7.1
-- PDO with SQLite support (or MongoDB)
-- GD, Zip extension enabled
-- Apache (with mod_rewrite enabled) or nginx
+- PHP extensions enabled: iconv gd pdo zip opcache pdo_sqlite
+- SQLite or MongoDB (needs mongodb from PECL besides)
+- Apache (with mod_rewrite and mod_expires) or nginx
 - Any modern Browser
 
 ---
