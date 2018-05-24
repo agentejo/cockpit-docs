@@ -21,7 +21,7 @@ fetch('/api/cockpit/authUser?token=xxtokenxx', {
         password: 'xxpasswordxx'
     })
 })
-.then(user => res.json())
+.then(user => user.json())
 .then(user => console.log(user));
 ```
 
@@ -37,7 +37,7 @@ fetch('/api/cockpit/saveUser?token=xxtokenxx', {
         user: {...} // user data (user, name, email, active, group)
     })
 })
-.then(user => res.json())
+.then(user => user.json())
 .then(user => console.log(user));
 ```
 
