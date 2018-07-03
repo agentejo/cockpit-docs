@@ -6,6 +6,7 @@ title: Installation
 sort: 2
 
 ===
+## Traditional Installation
 
 1. Download the latest version of Cockpit on [getcockpit.com/download](http://getcockpit.com/download).
 2. Unzip the downloaded zip package into your web root or a sub-directory of your web root.
@@ -21,6 +22,10 @@ Go to `/url/to/cockpit/install` in your favorite Browser and follow the instruct
 
 ---
 **Done!** You're ready to use Cockpit.
+
+## Installation using Docker
+
+If you want to install Cockpit using Docker, please take a look at our [Docker reference page](http://getcockpit.com/documentation/reference/docker)
 
 ## Upgrading to a newer version of Cockpit
 
