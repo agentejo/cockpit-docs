@@ -10,6 +10,25 @@ sort: 1
 In Cockpit you can build custom content models defined by a collection of different field types.
 
 
+### Access-List
+---
+Provides chooser for available Access groups
+
+
+### Account-Link
+---
+Link one or more user accounts
+
+_Options_
+
+```json
+{
+    "multiple": false,
+    "limit": null,
+}
+```
+
+
 ### Asset
 ---
 An asset field can reference an asset (e.g. file or pdf) you've uploaded in Cockpits Asset-Manager.
@@ -23,10 +42,12 @@ _Options_
 
 ```json
 {
-    "label": false
+    "label": false,
+    "default": false,
     "cls": "" // custom class
 }
 ```
+
 
 ### Code
 ---
@@ -41,6 +62,7 @@ _Options_
     "height": "auto"
 }
 ```
+
 
 ### Collection-Link
 ---
@@ -58,6 +80,7 @@ _Options_
 }
 ```
 
+
 ### Color
 ---
 Provides a color chooser field (based on Spectrum.js).
@@ -71,6 +94,21 @@ _Options_
 }
 ```
 
+
+### Colortag
+---
+Provides chooser for predefined colors
+
+_Options_
+
+```json
+{
+    "size": "inherit",
+    "colors": [/* list of hex color codes */]
+}
+```
+
+
 ### Date
 ---
 Provides a date chooser field (based on Spectrum.js).
@@ -80,7 +118,9 @@ _Options_
 ```json
 {
     "weekstart": 0,
-    "format": "YYYY-MM-DD"
+    "format": "YYYY-MM-DD",
+    "cls": "",
+    "placeholder": ""
 }
 ```
 
@@ -88,11 +128,19 @@ _Options_
 ---
 Provides a file chooser field (using Cockpits built-in finder module).
 
+_Options_
+
+```json
+{
+    "cls": "",
+    "placeholder": "No file selected..."
+}
+```
+
 
 ### Gallery
 ---
 Manage images and additional meta information for each image.
-
 
 _Options_
 
@@ -106,6 +154,7 @@ _Options_
     }
 }
 ```
+
 
 ### Html
 ---
@@ -148,6 +197,27 @@ _Options_
 ```
 
 
+### Layout
+---
+
+Layout editor
+
+_Options_
+
+```json
+{
+    "components": {
+        /* Custom components */
+    }
+}
+```
+
+### Layout-Grid
+---
+
+Layout editior with preselected grid component
+
+
 ### Location
 ---
 Location chooser to get lat,lng values.
@@ -173,6 +243,7 @@ _Options_
 }
 ```
 
+
 ### Multipleselect
 ---
 Select multiple values from a pre-defined list of options.
@@ -185,6 +256,7 @@ _Options_
 }
 ```
 
+
 ### Object
 ---
 JSON object editor.
@@ -193,10 +265,11 @@ _Options_
 
 ```json
 {
-    "height": 300,
+    "height": "300px",
     "cls": ""
 }
 ```
+
 
 ### Password
 ---
@@ -209,6 +282,7 @@ _Options_
     "cls": ""
 }
 ```
+
 
 ### Rating
 ---
@@ -234,7 +308,8 @@ _Options_
 ```json
 {
     "field": {"type": "text", "label": "Name"},
-    "display": null // display value on re-order
+    "display": null, // display value on re-order
+    "limit": null
 }
 ```
 
@@ -249,6 +324,7 @@ or add field chooser
 }
 ```
 
+
 ### Select
 ---
 Provides a selectbox.
@@ -257,6 +333,7 @@ _Options_
 
 ```json
 {
+    "cls": "",
     "options": "Option 1, Option 2, Option 3"
 }
 ```
@@ -277,6 +354,7 @@ _Options_
 }
 ```
 
+
 ### Tags
 ---
 Manage a list of tags.
@@ -285,9 +363,11 @@ _Options_
 
 ```json
 {
-    "autocomplete": []
+    "autocomplete": [],
+    "placeholder": "Add Tag..."
 }
 ```
+
 
 ### Text
 ---
@@ -298,15 +378,16 @@ _Options_
 ```
 {
   "cls": "",
-  "maxlength": null, 
-  "minlength": null, 
-  "step": null, 
-  "placeholder": null, 
-  "pattern": null, 
+  "maxlength": null,
+  "minlength": null,
+  "step": null,
+  "placeholder": null,
+  "pattern": null,
   "size": null,
   "slug": true
 }
 ```
+
 
 ### Textarea
 ---
@@ -317,13 +398,15 @@ _Options_
 ```
 {
   "cls": "",
-  "maxlength": null, 
-  "minlength": null, 
-  "cols": null, 
-  "placeholder": null, 
+  "allowtabs": true,
+  "maxlength": null,
+  "minlength": null,
+  "placeholder": null,
+  "cols": null,
   "rows": null
 }
 ```
+
 
 ### Time
 ---
@@ -337,6 +420,7 @@ _Options_
 }
 ```
 
+
 ### WYSIWYG
 ---
 A WYSIWYG editor field.
@@ -347,6 +431,7 @@ _Options_
 ```
 {
   "cls": "",
+  "rows": null,
   "editor": { /* tinyMCE settings */ }
 }
 ```
