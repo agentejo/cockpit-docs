@@ -84,6 +84,7 @@ fetch('/api/cockpit/image?token=xxtokenxx', {
     body: JSON.stringify({
         src: imagePath || asset._id,
         m: ('thumbnail' | 'bestFit' | 'resize' | 'fitToWidth' | 'fitToHeight'),
+        f: (array),         // filter name(s), one of 'blur' | 'brighten' | 'colorize' | 'contrast' | 'darken' | 'desaturate' | 'edge detect' | 'emboss' | 'flip' | 'invert' | 'opacity' | 'pixelate' | 'sepia' | 'sharpen' | 'sketch'
         w: (int),           // width
         h: (int),           // height
         q: (int),           // quality
@@ -96,5 +97,5 @@ fetch('/api/cockpit/image?token=xxtokenxx', {
 ```
 
 ```html
-<img src="/api/cockpit/image?token=xxtokenxx&src=path&w=200&h=200&o=true">
+<img src="/api/cockpit/image?token=xxtokenxx&src=path&w=200&h=200&f[brighten]=25&o=true" />
 ```
