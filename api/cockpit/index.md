@@ -84,7 +84,7 @@ fetch('/api/cockpit/image?token=xxtokenxx', {
     body: JSON.stringify({
         src: imagePath || asset._id,
         m: ('thumbnail' | 'bestFit' | 'resize' | 'fitToWidth' | 'fitToHeight'),
-        f: (array),         // filter name(s), one of 'blur' | 'brighten' | 'colorize' | 'contrast' | 'darken' | 'desaturate' | 'edge detect' | 'emboss' | 'flip' | 'invert' | 'opacity' | 'pixelate' | 'sepia' | 'sharpen' | 'sketch'
+        f: (array),         // filter name(s), one or more of: 'blur' | 'brighten' | 'colorize' | 'contrast' | 'darken' | 'desaturate' | 'edge detect' | 'emboss' | 'flip' | 'invert' | 'opacity' | 'pixelate' | 'sepia' | 'sharpen' | 'sketch'
         w: (int),           // width
         h: (int),           // height
         q: (int),           // quality
