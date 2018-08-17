@@ -7,7 +7,6 @@ sort: 1
 
 ===
 
-
 ### /api/cockpit/authUser
 
 Authenticate user
