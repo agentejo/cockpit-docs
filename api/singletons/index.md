@@ -3,7 +3,7 @@ type: documentation/page
 created: 2018-08-17 14:15:00
 modified: 2018-08-17 14:15:00
 title: Singletons
-sort: 3
+sort: 5
 
 ===
 

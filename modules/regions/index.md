@@ -3,7 +3,7 @@ type: documentation/page
 created: 2016-09-04 21:39:57
 modified: 2016-09-05 15:54:20
 title: Regions
-sort: 1
+sort: 2
 
 ===
 
@@ -31,4 +31,3 @@ You can also write PHP code for e.g. looping over field values.
 ![Entry Form](form.png)
 
 Content editors will get an easy to use form to manage the region data.
-
