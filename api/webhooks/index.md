@@ -25,11 +25,11 @@ All data will be send as _application/json_.
 
 ### Using POST-data in the webhook destination script
 
-Some hooks send data along with the hook (like some of the collection event hooks which send the fresh new collection's name and configuration).
+Some hooks send data along to the webhook destination script as hook is triggered (like some of the collection-event-hooks which send the fresh new collection's name and configuration).
 
 The data is posted to the webhook destination script in RAW-Post format. So the global var _**$\_POST**_ won't contain any data.
 
-Put _**$\_POST = file_get_contents("php://input")['args']**_ to the beginning of your webhook destination script in order to use the _**$\_POST**_ var like regularly expected.
+Put _**$\_POST = file_get_contents("php://input")['args']**_ (or _**$\_POST = file_get_contents("php://input")**_) to the beginning of your webhook destination script in order to use the _**$\_POST**_ var like regularly expected.
 
 ### Concrete list of events (complete as of august 2018)
 
