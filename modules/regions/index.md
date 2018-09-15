@@ -14,7 +14,7 @@ Regions are editable content and code snippets which you can re-use everywhere o
 
 ![Edit Region Fields](create_fields.png)
 
-Mange region fields in the field-manager and re-use them in the region template code.
+Manage region fields in the field-manager and re-use them in the region template code.
 
 ## Region Template
 
