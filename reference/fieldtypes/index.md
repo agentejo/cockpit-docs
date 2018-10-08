@@ -334,7 +334,8 @@ _Options_
 ```json
 {
     "cls": "",
-    "options": "Option 1, Option 2, Option 3"
+    "options": "Option 1, Option 2, Option 3",
+    "default": "Option 2"
 }
 ```
 
