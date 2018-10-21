@@ -24,10 +24,16 @@ app.name: My Project X
 # cockpit session name
 session.name: mysession
 
+# cockpit default language
+i18n: de
+
 # define the languages you want to manage
 languages:
     fr: French
     de: German
+
+# define allowed file types for uploads (global)
+allowed_uploads: pdf, png, jpg, jpeg, svg, gif
 
 # define additional groups
 groups:
@@ -35,6 +41,9 @@ groups:
         $admin: false
         $vars:
             finder.path: /storage/upload
+            media.path : /storage/media
+            finder.allowed_uploads: png, jpg, jpeg
+            assets.allowed_uploads: png, jpg, jpeg
         cockpit:
             backend: true
             finder: true
@@ -51,13 +60,21 @@ database:
 # use smtp to send emails
 mailer:
     from      : info@mydomain.tld
+    from_name : John Doe
     transport : smtp
     host      : smtp.myhost.tld
     user      : username
     password  : xxpasswordxx
     port      : 25
     auth      : true
-    encryption: '' # '', 'ssl' or 'tls'
+    encryption: ssl # '', ssl, tls or starttls
+    reply_to  : john.doe@mydomain.tld
+    cc        :
+        - mail1@example.com
+        - mail2@example.com
+    bcc       :
+        - mail1@example.com
+        - mail2@example.com
 
 ```
 
