@@ -58,10 +58,13 @@ fetch('/api/collections/get/posts?token=xxtokenxx', {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
         filter: {published:true},
+        fields: {fieldA: 1, fieldB: 1},
         limit: 10,
         skip: 5,
         sort: {_created:-1},
-        populate: 1 // resolve linked collection items
+        populate: 1, // resolve linked collection items
+
+        lang: 'de' // return normalized language fields (fieldA_de => fieldA)
     }))
     .then(res=>res.json())
     .then(res => console.log(res));

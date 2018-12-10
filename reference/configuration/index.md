@@ -10,55 +10,72 @@ sort: 0
 By default, Cockpit doesn't need any further configuration to run. However, you might want to manage multi-language content or use MongoDB instead of SQLite as your favorite data storage. Therefore Cockpit provides an easy way to tweak some settings.
 
 
-
-To do so, go to _Settings > System Settings_ and configure Cockpit via YAML.
+To do so, create a configuration file in the config folder: `/config/config.php`.
 
 
 ### Possible settings:
 
-```yaml
+```php
+<?php
 
-# cockpit session name
-app.name: My Project X
+return [
 
-# cockpit session name
-session.name: mysession
+    # cockpit session name
+    'app.name' => 'My Project X',
 
-# define the languages you want to manage
-languages:
-    fr: French
-    de: German
+    # cockpit session name
+    'session.name' => 'mysession',
 
-# define additional groups
-groups:
-    author:
-        $admin: false
-        $vars:
-            finder.path: /storage/upload
-        cockpit:
-            backend: true
-            finder: true
-        collections:
-            manage: true
+    # app custom security key
+    'sec-key' => 'xxxxx-SiteSecKeyPleaseChangeMe-xxxxx',
 
-# use mongodb as main data storage
-database:    
-    server: mongodb://localhost:27017
-    options:
-        db: cockpitdb
+    # site url (optional) - helpful if you're behind a reverse proxy
+    'site_url' => 'https://mydomain.com',
+
+    # define the languages you want to manage
+    'languages' => [
+        'fr' => 'French',
+        'de' => 'German'
+    ],
+
+    # define additional groups
+    'groups' => [
+        'author' => [
+            '$admin' => false,
+            '$vars' => [
+                'finder.path' => '/storage/upload'
+            ],
+            'cockpit' => [
+                'backend' => true,
+                'finder' => true
+            ],
+            'collections' => [
+                'manage' => true
+            ]
+        ]
+    ],
+
+    # use mongodb as main data storage
+    'database' => [   
+        'server' => 'mongodb://localhost:27017',
+        'options' => [
+            'db' => 'cockpitdb'
+        ]
+    ],
 
 
-# use smtp to send emails
-mailer:
-    from      : info@mydomain.tld
-    transport : smtp
-    host      : smtp.myhost.tld
-    user      : username
-    password  : xxpasswordxx
-    port      : 25
-    auth      : true
-    encryption: '' # '', 'ssl' or 'tls'
-
+    # use smtp to send emails
+    'mailer' => [
+        'from'       => 'info@mydomain.tld',
+        'transport'  => 'smtp'
+        'host'       => 'smtp.myhost.tld',
+        'user'       => 'username'
+        'password'   => 'xxpasswordxx',
+        'port'       => 25,
+        'auth'       => true,
+        'encryption' => '' # '', 'ssl' or 'tls'
+    ]
+];
 ```
 
 ### Group ACLs
@@ -74,4 +91,3 @@ Access to cockpit is managed by a simple access control list (ACL). The ACLs can
     * `manage`: Manger rights for collections. You need this for certain AJAX requests (Boolean. False if omitted)
 * `$vars`: Overwrite variables used by cockpit (Array)
   * `finder.path`: Root path from which the finder will show the files. Only used if `cockpit.finder` is true (String. Default is /)
- 
