@@ -75,8 +75,9 @@ return [
         'auth'       => true,
         'encryption' => '' # '', 'ssl' or 'tls'
     ]
-    
-    # Define Access-Control (CORS) settings. Those are the default values. You don't need to duplicate them all.
+
+    # Define Access-Control (CORS) settings.
+    # Those are the default values. You don't need to duplicate them all.
     'cors' => [
       'allowedHeaders' => 'X-Requested-With, Content-Type, Origin, Cache-Control, Pragma, Authorization, Accept, Accept-Encoding, Cockpit-Token',
       'allowedMethods' => 'PUT, POST, GET, OPTIONS, DELETE',

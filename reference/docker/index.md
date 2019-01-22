@@ -23,11 +23,11 @@ To complete the setup, open `http://localhost:8080/install` and follow the instr
 
 ## Extend the Image
 
-You can extend this image and add your custom cockpit/custom/config.php
+You can extend this image and add your custom `cockpit/config/config.php`
 
 ```json
 FROM agentejo/cockpit
-COPY config.php /var/www/html/custom/config.php
+COPY config.php /var/www/html/config/config.php
 ```
 
 ## Docker Compose
@@ -37,7 +37,7 @@ COPY config.php /var/www/html/custom/config.php
 ### MongoDB
 
 For larger projects you may find you want to use mongoDB over the built-in SQLite.
-To do this, you’ll need to set up some environment variables in your container as well as include a custom `config.php` file that picks up these variables. 
+To do this, you’ll need to set up some environment variables in your container as well as include a custom `config.php` file that picks up these variables.
 
 Workinge example custom config.php file that picks up environment variables from your container:
 
