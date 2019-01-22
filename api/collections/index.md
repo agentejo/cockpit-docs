@@ -45,18 +45,18 @@ fetch('/api/collections/updateCollection/posts?token=xxtokenxx', {
     .then(collection => console.log(collection));
 ```
 
-### /api/collections/get/{collectionname}
+### /api/collections/get/{collectionname}/posts
 
 Get collection entries
 
 ```javascript
-fetch('/api/collections/get/posts?token=xxtokenxx')
+fetch('/api/collections/get/collection/posts?token=xxtokenxx')
     .then(res => res.json())
     .then(res => console.log(res));
 ```
 
 ```javascript
-fetch('/api/collections/get/posts?token=xxtokenxx', {
+fetch('/api/collections/get/collection/posts?token=xxtokenxx', {
     method: 'post',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
