@@ -60,7 +60,7 @@ Possible subcommands to flush only certain types of data:
 
 ### ./cp create-lang
 
-Create language file for brhe backend in `config/i18n`.
+Create language file for the admin ui in `config/i18n`.
 
 _Arguments_
 
