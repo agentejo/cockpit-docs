@@ -7,7 +7,7 @@ sort: 0
 
 ===
 
-Before accessing your data you need to create an API token. To do so please go to _Settings > API Access_ to generate yown unique API token. You can re-generate the token anytime you want.
+Before accessing your data you need to create an API token. To do so please go to _Settings > API Access_ to generate your own unique API token. You can re-generate the token anytime you want.
 
 ![Create Token](webtoken.png)
 
