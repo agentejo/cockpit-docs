@@ -13,7 +13,7 @@ Get all collections
 
 ```javascript
 fetch('/api/collections/listCollections?token=xxtokenxx')
-    .then(collections => collection.json())
+    .then(collections => collections.json())
     .then(collections => console.log(collections));
 ```
 
