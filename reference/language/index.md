@@ -4,6 +4,6 @@ sort: 5
 
 ===
 
-If you want to add multiple Languages to your Backend you can simply copy the i18n Language File [from this Repository](https://github.com/agentejo/cockpit-i18n) to `/config/i18n`
+If you want to add multiple languages to your Cockpit backend you can simply copy the i18n language files [from this Repository](https://github.com/agentejo/cockpit-i18n) to `/config/cockpit/i18n`. After that you will be able to change the language of Cockpit users in the user management.
 
-When the config or i18n folder is missing, just create 'em. Keep in mind to keep Webserver Permissions for those folders.
+When the folder `/config/cockpit/i18n` is missing, just create it. Keep in mind to keep webserver permissions for those folders.
