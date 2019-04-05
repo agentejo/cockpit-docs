@@ -52,8 +52,8 @@ $body = file_get_contents('php://input');
 - _cockpit.assets.save_
 - _cockpit.assets.remove_
 - _cockpit.rest.init_
-- _cockpit.rest.authenticate_
-- _cockpit.rest.erroronrequest_
+- _cockpit.api.authenticate_
+- _cockpit.api.erroronrequest_
 - _collections.createcollection_
 - _collections.updatecollection_
 - _collections.removecollection_
