@@ -28,7 +28,7 @@ Possible subcommands to export only certain types of data:
 
 ### ./cp import
 
-Imports data from a folder. It expects the structure of a `cp export` result.
+Imports data from a folder. **It expects the structure of a `cp export` result**.
 
 _Arguments_
 
