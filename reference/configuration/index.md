@@ -10,7 +10,9 @@ sort: 0
 By default, Cockpit doesn't need any further configuration to run. However, you might want to manage multi-language content or use MongoDB instead of SQLite as your favorite data storage. Therefore Cockpit provides an easy way to tweak some settings.
 
 
-To do so, create a configuration file in the config folder: `/config/config.php`.
+By default there is no config folder and config file.
+To do so, create a config folder and a configuration file in the config folder: `/config/config.php`.
+
 
 
 ### Possible settings:
@@ -34,9 +36,12 @@ return [
 
     # define the languages you want to manage
     'languages' => [
+        //'default' => 'English',       #setting a default language is optional
         'fr' => 'French',
         'de' => 'German'
     ],
+    
+    
 
     # define additional groups
     'groups' => [
@@ -89,9 +94,24 @@ return [
 ];
 ```
 
-### Group ACLs
+### Language settings
 
-Access to cockpit is managed by a simple access control list (ACL). The ACLs can be defined by module and acl name in the settings above. The following ACLs can be defined on a per-group basis:
+Cockpit always uses a 'default' language, but setting a default language name is optional.
+
+* When should you consider setting a default language?
+    * if using localized multilingual content
+    * because the Language selection dropdown would become confusing
+* Why should you set a default language?
+    * you can get rid of misleading "default" option in content Language selection dropdown
+* How will multiple languages affect my access to content of localized Fields?
+    * using multiple languages will create additional content for localized Fields
+* How can I reference localized Fields?
+    * with their corresponding `fieldName`
+    * with their corresponding `fieldName` and appended language suffix: `fieldName_fr` or `fieldName_de`
+
+### Group ACLs (Access Control List)
+
+Access to cockpit is managed by a simple access control list (ACL). The ACLs can be defined by module and ACL name in the settings above. The following ACLs can be defined on a per-group basis:
 
 * `$admin`: Give all admin rights to the group. This overwrites whatever is defined under `cockpit` (Boolean. False if omitted)
 * `cockpit`: Access to the cockpit itself (Array)
