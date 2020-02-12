@@ -352,7 +352,7 @@ _Options_
         {"name":"name", "type": "text"},
         {"name":"about", "type": "html"}
     ],
-    "display": "{name} <small>{about}</small>"
+    "display": "{name} <small>{about}</small>" /* Custom list formatting */
 }
 ```
 
