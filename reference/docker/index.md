@@ -39,7 +39,7 @@ COPY config.php /var/www/html/config/config.php
 For larger projects you may find you want to use mongoDB over the built-in SQLite.
 To do this, you’ll need to set up some environment variables in your container as well as include a custom `config.php` file that picks up these variables.
 
-Workinge example custom config.php file that picks up environment variables from your container:
+Working example custom config.php file that picks up environment variables from your container:
 
 ```
 <?php
