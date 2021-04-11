@@ -89,6 +89,7 @@ fetch('/api/cockpit/image?token=xxtokenxx', {
         q: (int),           // quality
         d: (boolean)        // include full domain path
         b64: (boolean)      // return base64 encoded image string
+        o : (boolean)       // out the image instead of the url from which the image can be fetched
     })
 })
 .then(url => url.text())
