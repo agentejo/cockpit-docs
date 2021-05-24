@@ -65,3 +65,24 @@ Create language file for the admin ui in `config/cockpit/i18n`.
 _Arguments_
 
 `--lang`: target language
+
+
+### ./cp collection/renamefield
+
+Rename collection field in it's entries
+
+_Arguments_
+
+`--collection`: collection name
+`--field`: field name
+`--newfield` new field name
+
+
+## ./cp collection/removefield
+
+Remove collection field in it's entries
+
+_Arguments_
+
+`--collection`: collection name
+`--field`: field name
