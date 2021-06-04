@@ -208,7 +208,11 @@ _Options_
 {
     "components": {
         /* Custom components */
-    }
+    },
+    // array with names of the components to restrict layout to
+    "restrict": ['section'],
+    // array with names of components to exclude
+    "exclude": ['divider']
 }
 ```
 
