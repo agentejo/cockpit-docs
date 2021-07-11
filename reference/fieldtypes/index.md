@@ -307,8 +307,12 @@ _Options_
 
 ```json
 {
-    "field": {"type": "text", "label": "Name"},
-    "display": null, // display value on re-order
+    "field": {
+      "type": "text",
+      "label": "Name",
+      "display": "$value", /* display value on re-order */
+      "options": {} /* field options */
+    },
     "limit": null
 }
 ```
@@ -320,7 +324,8 @@ or add field chooser
     "fields": [
         {"type": "text", "label": "Name"},
         {"type": "html", "label": "Html Code"}
-    ]
+    ],
+    "display": "Name" /* display value on re-order */
 }
 ```
 
