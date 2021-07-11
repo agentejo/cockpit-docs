@@ -351,7 +351,8 @@ _Options_
     "fields": [
         {"name":"name", "type": "text"},
         {"name":"about", "type": "html"}
-    ]
+    ],
+    "display": "{name} <small>{about}</small>" /* Custom list formatting */
 }
 ```
 
