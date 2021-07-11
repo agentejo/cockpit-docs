@@ -379,15 +379,20 @@ _Options_
 ```
 {
   "cls": "",
+  "type": "text", /* Input type */
+  "showCount": false, /* Show characters count; available only on text type */
   "maxlength": null,
   "minlength": null,
-  "step": null,
   "placeholder": null,
   "pattern": null,
   "size": null,
+  "step": null, /* n) */
+  "min": null, /* n) */
+  "max": null, /* n) */
   "slug": true
 }
 ```
+n) Available only on number type
 
 
 ### Textarea
