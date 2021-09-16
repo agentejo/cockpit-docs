@@ -65,3 +65,69 @@ Create language file for the admin ui in `config/cockpit/i18n`.
 _Arguments_
 
 `--lang`: target language
+
+### ./cp install/addon
+
+Pulls addon zip packager from url or github repo name. 
+
+_Arguments_
+`--url`: url 
+`--name`: repository name belonging to agentejo organization on github
+
+For _example_ if we wanted to download Lokalize addon from github we would need to run following command:
+```
+./cp install/addon --name Lokalize
+```
+
+### ./cp account/create
+
+Creates new Cockpit user
+
+_Arguments_
+`--user`: username
+`--email`: email
+`--passwd`: plain password
+
+
+### ./cp account/generate-password
+
+Encodes provided password and returns its hash.
+
+_Arguments_
+`--passwd`: plain password
+
+### ./cp jobs/start-runner
+
+Starts job runner for given task id.
+
+_Arguments_
+`idle`: task id
+
+### ./cp jobs/stop-runner
+
+Stops job runner
+
+### ./cp removefield/collections
+
+Deletes field from given collection. Note that this does not clean removed field's data from entries.
+
+_Arguments_
+`--collection`: target collection
+`--field`: field to be removed
+
+### ./cp rename/collections
+
+Renames collection.
+
+_Arguments_
+`--name`: target collection
+`--to`: new collection name
+
+### ./cp renamefield/collections
+
+Renames field in given collection.
+
+_Arguments_
+`--collection`: target collection
+`--field`: target field
+`--newfield`: new field name
